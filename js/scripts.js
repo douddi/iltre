@@ -47,6 +47,11 @@
 		$('nav.main-nav.show-menu').removeClass('show-menu');
 		return false;
 	});
+	$('.navlink a').on('click', function(){
+		$('nav.main-nav.show-menu').removeClass('show-menu');
+		$(document).scrollTop($($(this).attr('scroll')).offset().top);
+		return false;
+	});
 
 
 	$('.mouse-wheel').each(function(){
@@ -137,7 +142,7 @@
 			});
 		});
 
-		
+
 		$('.image-link').each(function(){
 			var $this = $(this);
 			$this.magnificPopup({
